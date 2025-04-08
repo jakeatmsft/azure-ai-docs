@@ -36,6 +36,9 @@ Since spillover uses a combination of provisioned and standard deployments to ma
 ## How to enable spillover
 The spillover capability can be enabled for all requests on a provisioned deployment using a deployment property or it can be managed on a per-request basis using request headers. The following section explains how to configure spillover for each of these scenarios. 
 
+> [!NOTE]
+> Currently, the Azure OpenAI Resource must be configured to <b>Allow network access</b> from <b>`All Networks`</b> to enable spillover.
+
 ### Enable spillover for all requests on a provisioned deployment
 To enable spillover for all requests on a provisioned deployment, set the deployment property `spilloverDeploymentName` to the standard deployment target for spillover requests. This property can be set during the creation of a new provisioned deployment or can be added to an existing provisioned deployment. The `spilloverDeploymentName` property needs to be set to the name of a standard deployment within the same Azure OpenAI Service resource as your provisioned deployment. 
 
